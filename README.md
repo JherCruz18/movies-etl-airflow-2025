@@ -86,6 +86,14 @@ docker-compose down
 
 ## 📊 Pipeline DAG: `cem_pipeline`
 
+### Diagrama del Flujo ETL
+
+![Diagrama ETL Pipeline](./assets/pipeline-diagram.svg)
+
+### Estructura en Airflow
+
+![Estructura Airflow](./assets/ETL_Airflow.png)
+
 El DAG ejecuta tres tareas en secuencia:
 
 ### 1. **extract_bronze** 
