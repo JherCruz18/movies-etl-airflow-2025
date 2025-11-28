@@ -1,0 +1,55 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">ETL Pipeline: Bronze → Silver → Gold</text>
+  
+  <!-- Data Source -->
+  <rect x="50" y="80" width="120" height="80" fill="#ffcccb" stroke="#ff6b6b" stroke-width="2" rx="5"/>
+  <text x="110" y="110" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">DATA SOURCE</text>
+  <text x="110" y="130" font-size="11" text-anchor="middle" fill="#555">Latest 2025</text>
+  <text x="110" y="145" font-size="11" text-anchor="middle" fill="#555">movies.csv</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 170 120 L 210 120" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="190" y="110" font-size="10" text-anchor="middle" fill="#666">extract</text>
+  
+  <!-- Bronze Layer -->
+  <rect x="210" y="80" width="120" height="80" fill="#d4a574" stroke="#a67c52" stroke-width="2" rx="5"/>
+  <text x="270" y="110" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">BRONZE LAYER</text>
+  <text x="270" y="130" font-size="11" text-anchor="middle" fill="#fff">Raw Data</text>
+  <text x="270" y="145" font-size="11" text-anchor="middle" fill="#fff">bronze.csv</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 330 120 L 370 120" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="350" y="110" font-size="10" text-anchor="middle" fill="#666">transform</text>
+  
+  <!-- Silver Layer -->
+  <rect x="370" y="80" width="120" height="80" fill="#c0c0c0" stroke="#888" stroke-width="2" rx="5"/>
+  <text x="430" y="110" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">SILVER LAYER</text>
+  <text x="430" y="130" font-size="11" text-anchor="middle" fill="#333">Clean Data</text>
+  <text x="430" y="145" font-size="11" text-anchor="middle" fill="#333">silver.csv</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M 490 120 L 530 120" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="510" y="110" font-size="10" text-anchor="middle" fill="#666">load</text>
+  
+  <!-- Gold Layer -->
+  <rect x="530" y="80" width="120" height="80" fill="#ffd700" stroke="#daa520" stroke-width="2" rx="5"/>
+  <text x="590" y="110" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">GOLD LAYER</text>
+  <text x="590" y="130" font-size="11" text-anchor="middle" fill="#333">Metrics</text>
+  <text x="590" y="145" font-size="11" text-anchor="middle" fill="#333">gold.csv</text>
+  
+  <!-- Bottom info -->
+  <text x="400" y="220" font-size="11" text-anchor="middle" fill="#666">extract_bronze → transform_silver → load_gold</text>
+  <text x="400" y="240" font-size="10" text-anchor="middle" fill="#999">Scheduled: Daily (@daily)</text>
+  <text x="400" y="260" font-size="10" text-anchor="middle" fill="#999">Retries: 1 | Retry Delay: 5 minutes</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
