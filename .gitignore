@@ -1,11 +1,10 @@
-# Crear .gitignore
-@"
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+.env
 env/
 venv/
 .venv/
@@ -27,6 +26,3 @@ airflow-webserver.pid
 # OS
 .DS_Store
 Thumbs.db
-
-
-"@ | Out-File -Encoding UTF8 .gitignore
